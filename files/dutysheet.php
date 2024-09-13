@@ -115,7 +115,7 @@ else if(isset($_POST['dutysheetData']) && isset($_POST['dutysheetId'])) {
         // Days of the week array
         $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     
-        // Generating the HTML dynamically
+        
         $html = '';
         foreach ($days as $index => $day) {
             $checked = !empty($duty[$day]) ? "checked" : "";
