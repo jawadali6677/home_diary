@@ -55,17 +55,17 @@ if($run->execute())
             </form>
             <div class="table-responsive">
                 <table class="table table-stripped text-white table-borderless mt-3">
-                    <thead class="text-white" style="color: white !important;">
-                        <tr class="text-white">
-                            <th class="text-white">ID</th>
-                            <th class="text-white">Full Name</th>
-                            <th class="text-white">Gender</th>
-                            <th class="text-white">Address</th>
-                            <th class="text-white">Phone No</th>
-                            <th class="text-white">Salary</th>
+                    <thead class="" style="color: white !important;">
+                        <tr class="">
+                            <th class="">ID</th>
+                            <th class="">Full Name</th>
+                            <th class="">Gender</th>
+                            <th class="">Address</th>
+                            <th class="">Phone No</th>
+                            <th class="">Salary</th>
 
-                            <th class="text-white">Role</th>
-                            <th class="text-white">Action</th>
+                            <th class="">Role</th>
+                            <th class="">Action</th>
                         </tr>
                     </thead>
                     <tbody class="allEmployee">

@@ -70,7 +70,7 @@ if(isset($_SESSION['adminLogin'][0]) AND isset($_SESSION['adminLogin'][1]) AND !
             <div class="card-header">
               <h2>Admin Login</h2>
 
-              <form action="files/login.php" method="POST" class="submitForm">
+              <form action="files/login.php" method="POST" class="">
                 <div class="form-group">
                   <input type="text" id="email" name="login_username" placeholder="Enter username"
                     class="form-control mb-4 shadow rounded-0" style="border:1px solid black">
@@ -130,6 +130,6 @@ if(isset($_SESSION['adminLogin'][0]) AND isset($_SESSION['adminLogin'][1]) AND !
   <script src="plugins/match-height/jquery.matchHeight-min.js"></script>
   <!-- Main Script -->
 
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/custom.js"></script>
 </body>
