@@ -115,7 +115,7 @@ if($run->execute())
                         <form action="files/employee.php" method="post" class="submitForm">
                             <div class="form-group">
                                 <b>Employee Name</b>
-                                <input type="text" id="txtOnly" name="employee_name" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                                <input type="text" id="txtOnly" name="employee_name"
                                     placeholder="Enter Employee Name....!" class="form-control mb-4 shadow rounded-0 txtOnly"
                                     required>
                             </div>
