@@ -115,8 +115,8 @@ if($run->execute())
                         <form action="files/employee.php" method="post" class="submitForm">
                             <div class="form-group">
                                 <b>Employee Name</b>
-                                <input type="text" id="Events" name="employee_name"
-                                    placeholder="Enter Employee Name....!" class="form-control mb-4 shadow rounded-0"
+                                <input type="text" id="txtOnly" name="employee_name" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                                    placeholder="Enter Employee Name....!" class="form-control mb-4 shadow rounded-0 txtOnly"
                                     required>
                             </div>
 
@@ -142,7 +142,7 @@ if($run->execute())
 
                             <div class="form-group">
                                 <b>Phone No</b>
-                                <input type="text" name="phone_no" placeholder="Enter Phone No"
+                                <input type="number" name="phone_no" placeholder="Enter Phone No"
                                     class="form-control mb-4 shadow rounded-0" required>
                             </div>
 
@@ -152,9 +152,12 @@ if($run->execute())
                                     placeholder="Enter Employee Role" class="form-control mb-4 shadow rounded-0"
                                     required> -->
                                     <select name="employee_role" id="employee_role" class="form-control mb-4">
+                                        <option value="teacher ">Teacher</option>
                                         <option value="gardener">Gardener</option>
                                         <option value="driver">Driver</option>
                                         <option value="chef ">chef</option>
+                                        <option value="sweeper ">Sweeper</option>
+                                        <option value="guard ">Guard</option>
                                     </select>
                             </div>
 
@@ -162,7 +165,7 @@ if($run->execute())
 
                             <div class="form-group">
                                 <b>Monthly Salary</b>
-                                <input type="text" name="salary" placeholder="Enter Monthly Salary"
+                                <input type="number" name="salary" placeholder="Enter Monthly Salary"
                                     class="form-control mb-4 shadow rounded-0" required>
                             </div>
                             <!-- <div class="form-group">
@@ -337,7 +340,18 @@ if($run->execute())
     <script src="js/custom.js"></script>
 
 
-
+<script>
+$(document).on('keydown', '.txtOnly', function(e) {
+    if (e.shiftKey || e.ctrlKey || e.altKey) {
+        e.preventDefault();
+    } else {
+        var key = e.keyCode;
+        if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+            e.preventDefault();
+        }
+    }
+});
+</script>
 
 </body>
 

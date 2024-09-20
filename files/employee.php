@@ -68,7 +68,7 @@ if(isset($_POST['employee_name']) && isset($_POST['gender']) && isset($_POST['ad
             $html = '<div class="form-group">
                 <b>Employee Name</b>
                 <input type="text" id="Events" value="'.$data['full_name'].'" name="update_employee_name" placeholder="Enter Employee Name....!"
-                  class="form-control mb-4 shadow rounded-0" required>
+                  class="form-control mb-4 shadow rounded-0 txtOnly" required>
                   <input type="number"  name="employee_id" value="'.$data['id'].'" hidden>
               </div>
 
@@ -84,7 +84,7 @@ if(isset($_POST['employee_name']) && isset($_POST['gender']) && isset($_POST['ad
 
               <div class="form-group">
                 <b>Phone No</b>
-                <input type="text" name="update_phone_no" value="'.$data['phone_no'].'" placeholder="Enter Phone No"
+                <input type="number" name="update_phone_no" value="'.$data['phone_no'].'" placeholder="Enter Phone No"
                   class="form-control mb-4 shadow rounded-0" required>
               </div>
 
@@ -94,12 +94,15 @@ if(isset($_POST['employee_name']) && isset($_POST['gender']) && isset($_POST['ad
                       <option value="gardener" '.($data['employee_role'] == "gardener" ? 'selected' : '').'>Gardener</option>
                 <option value="driver" '.($data['employee_role'] == "driver" ? 'selected' : '').'>Driver</option>
                 <option value="chef" '.($data['employee_role'] == "chef" ? 'selected' : '').'>Chef</option>
+                <option value="sweeper" '.($data['employee_role'] == "sweeper" ? 'selected' : '').'>Sweeper</option>
+                <option value="guard" '.($data['employee_role'] == "guard" ? 'selected' : '').'>Guard</option>
+                <option value="teacher" '.($data['employee_role'] == "teacher" ? 'selected' : '').'>Teacher</option>
                   </select>
               </div>
 
               <div class="form-group">
                 <b>Monthly Salary</b>
-                <input type="text" name="update_salary" value="'.$data['salary'].'" placeholder="Enter Monthly Salary"
+                <input type="number" name="update_salary" value="'.$data['salary'].'" placeholder="Enter Monthly Salary"
                   class="form-control mb-4 shadow rounded-0" required>
               </div>';
 
